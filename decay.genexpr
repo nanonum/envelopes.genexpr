@@ -1,0 +1,13 @@
+decay(length, reset){
+	History index(0);
+	hitflag = 0; // set 1 when the index decrements
+	gate = reset;
+	
+	if(reset != 0){ 
+		index = length; 
+	} else if(index != 0){
+		hitflag = 1;
+		index = max(0, index-1);
+	}
+	return index / length, hitflag;
+}
