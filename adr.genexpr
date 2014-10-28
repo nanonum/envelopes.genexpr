@@ -5,7 +5,6 @@ adr(attack, decay, reset, legato){
 
 	// reset, retrigger, regart, legato
 	if(reset && index < attack){
-		index = 0;
 		cpu = 1;
 	}
 	else if(reset && index > attack && legato){
